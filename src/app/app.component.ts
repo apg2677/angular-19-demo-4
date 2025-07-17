@@ -8,7 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  inputValue: string = 'Hello';
-  isDisabled: boolean = false;
-  imgSrc: string = '/assets/Angular.jpg';
+  display(msg: string) {
+    alert(msg);
+  }
 }
