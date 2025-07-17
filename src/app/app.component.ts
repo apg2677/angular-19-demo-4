@@ -8,7 +8,12 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  display(msg: string) {
-    alert(msg);
+  counter: number = 0;
+
+  increment() {
+    this.counter++;
+  }
+  decrement() {
+    this.counter--;
   }
 }
