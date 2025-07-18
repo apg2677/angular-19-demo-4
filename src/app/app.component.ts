@@ -1,19 +1,18 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  counter: number = 0;
+  inputVal: string = '';
+  dynamicVal: string = '';
 
-  increment() {
-    this.counter++;
-  }
-  decrement() {
-    this.counter--;
+  show() {
+    this.dynamicVal = this.inputVal;
   }
 }
