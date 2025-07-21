@@ -1,23 +1,23 @@
-<div class="cart-container">
-  <div class="form-group">
-    <label>Quantity</label>
-    <input
-      [(ngModel)]="quantity"
-      min="0"
-      type="number"
-      class="quantity-input"
-    />
-  </div>
-  <div class="price-info">
-    <p>
-      Price: <span class="price">{{ pricePerItem }}</span>
-    </p>
-    <label>Total </label>
-    <input
-      type="text"
-      class="total-price-input"
-      readonly
-      [(ngModel)]="totalPrice"
-    />
-  </div>
+<div>
+  <h1>List of employees</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees(); track emp.id) {
+      <tr>
+        <td>{{ emp.id }}</td>
+        <td>{{ emp.name }}</td>
+        <td>{{ emp.role }}</td>
+      </tr>
+      } @empty {
+      <h2>No Employees Found</h2>
+      }
+    </tbody>
+  </table>
 </div>
