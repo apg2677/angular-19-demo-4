@@ -1,8 +1,25 @@
-
-
-img {
-    height: 300px;
-    width:300px;
-    display: block;
-    margin: 0 auto;
+.updateStyles {
+  text-align: center;
+  background-color: #2f534b;
+  color: goldenrod;
+  font-size: 21px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  width: 700px;
+}
+.italicText {
+  font-style: italic;
+}
+.letterFormat {
+  text-transform: uppercase;
+}
+input {
+  width: 200px;
+  height: 25px;
+  font-size: 15px;
+  color: #fff;
+}
+input.txt {
+  background-color: rgba(160, 191, 21, 0.315);
 }
