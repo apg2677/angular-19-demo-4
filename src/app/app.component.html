@@ -3,5 +3,8 @@
     <input type="text" [(ngModel)]="user" />
     <label for="">Full Name</label>
   </div>
-  <ng-container> </ng-container>
+  <ng-container *ngIf="user !== ''; else notValid"> </ng-container>
+  <ng-template #notValid>
+    <h3>Please enter your name</h3>
+  </ng-template>
 </div>

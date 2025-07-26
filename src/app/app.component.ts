@@ -16,6 +16,5 @@ interface empInterface {
   styleUrl: 'app.component.scss',
 })
 export class AppComponent {
-  // listItems: string[] = ['ItemA', 'ItemB', 'ItemC', 'ItemD'];
-  listItems: string[] = [];
+  user: string = '';
 }
