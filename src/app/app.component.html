@@ -1,8 +1,7 @@
-<ng-container *ngIf="listItems.length > 0; else noItems">
-  <ul>
-    <li *ngFor="let item of listItems">{{ item }}</li>
-  </ul>
-</ng-container>
-<ng-template #noItems>
-  <p>No Items to display!</p>
-</ng-template>
+<div class="box">
+  <div class="input-container">
+    <input type="text" [(ngModel)]="user" />
+    <label for="">Full Name</label>
+  </div>
+  <ng-container> </ng-container>
+</div>
