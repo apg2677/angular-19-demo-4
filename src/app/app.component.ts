@@ -16,9 +16,19 @@ interface empInterface {
   styleUrl: 'app.component.scss',
 })
 export class AppComponent {
-  hasText: boolean = false;
+  nm: string = '';
+  em: string = '';
+  emailIsValid: boolean = false;
+  formSubmitted: boolean = false;
 
-  textInput(e: any) {
-    this.hasText = e.target.value !== '';
+  checkEmailValidation(em: string): void {
+    if (em.includes('@') && em.includes('.com')) {
+      this.emailIsValid = true;
+    } else {
+      this.emailIsValid = false;
+    }
+  }
+  showMessage() {
+    if (this.nm && this.emailIsValid) this.formSubmitted = true;
   }
 }
