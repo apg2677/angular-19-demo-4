@@ -16,10 +16,9 @@ interface empInterface {
   styleUrl: 'app.component.scss',
 })
 export class AppComponent {
-  a: number = 10;
-  b: number = 20;
-
-  calc(): number {
-    return this.a + this.b;
-  }
+  showDetails = {
+    name: 'userA',
+    age: 29,
+    location: 'New York',
+  };
 }

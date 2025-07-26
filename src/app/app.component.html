@@ -1,5 +1,8 @@
-<ng-template #show let-msg="showMessage">
-  <p style="font-size: 20pt">Output {{ msg }}</p>
+<ng-template #show let-person="showMessage">
+  <p style="font-size: 20pt">
+    Output {{ person.name }}, age: {{ person.age }}, location:
+    {{ person.location }}
+  </p>
 </ng-template>
-<ng-container *ngTemplateOutlet="show; context: { showMessage: calc() }">
+<ng-container *ngTemplateOutlet="show; context: { showMessage: showDetails }">
 </ng-container>
