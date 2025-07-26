@@ -16,18 +16,6 @@ interface empInterface {
   styleUrl: 'app.component.scss',
 })
 export class AppComponent {
-  subjectList = [
-    {
-      subCode: 101,
-      name: 'JavaScript',
-    },
-    {
-      // subCode: 102,
-      name: 'C++',
-    },
-    {
-      subCode: 103,
-      name: 'NestJS',
-    },
-  ];
+  // listItems: string[] = ['ItemA', 'ItemB', 'ItemC', 'ItemD'];
+  listItems: string[] = [];
 }

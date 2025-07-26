@@ -1,6 +1,8 @@
-<ng-container *ngFor="let subject of subjectList">
-  <div *ngIf="subject.subCode">
-    <span>Subject Code: {{ subject.subCode }}</span>
-    <span>Subject Name: {{ subject.name }}</span>
-  </div>
+<ng-container *ngIf="listItems.length > 0; else noItems">
+  <ul>
+    <li *ngFor="let item of listItems">{{ item }}</li>
+  </ul>
 </ng-container>
+<ng-template #noItems>
+  <p>No Items to display!</p>
+</ng-template>
