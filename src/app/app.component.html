@@ -1,10 +1,5 @@
 <ng-template #show let-msg="showMessage">
-  <p style="font-size: 20pt">{{ msg }}</p>
+  <p style="font-size: 20pt">Output {{ msg }}</p>
 </ng-template>
-<ng-container
-  *ngTemplateOutlet="
-    show;
-    context: { showMessage: 'This is the context message' }
-  "
->
+<ng-container *ngTemplateOutlet="show; context: { showMessage: calc() }">
 </ng-container>
