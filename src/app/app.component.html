@@ -1,8 +1,27 @@
-<ng-template #show let-person>
-  <p style="font-size: 20pt">
-    Output {{ person.name }}, age: {{ person.age }}, location:
-    {{ person.location }}
-  </p>
+<ng-template #employeeTable let-emp>
+  <table
+    border="1"
+    style="
+      width: 50%;
+      text-align: center;
+      font-size: 18pt;
+      margin: 0 auto;
+      padding: 1rem;
+    "
+  >
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Salary</th>
+    </tr>
+    <tr *ngFor="let e of emp">
+      <td>{{ e.id }}</td>
+      <td>{{ e.name }}</td>
+      <td>{{ e.salary }}</td>
+    </tr>
+  </table>
 </ng-template>
-<ng-container *ngTemplateOutlet="show; context: { $implicit: showDetails }">
-</ng-container>
+
+<ng-container
+  *ngTemplateOutlet="employeeTable; context: { $implicit: employees }"
+></ng-container>
