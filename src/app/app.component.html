@@ -1,27 +1,63 @@
-<ng-template #employeeTable let-emp>
-  <table
-    border="1"
-    style="
-      width: 50%;
-      text-align: center;
-      font-size: 18pt;
-      margin: 0 auto;
-      padding: 1rem;
-    "
-  >
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Salary</th>
-    </tr>
-    <tr *ngFor="let e of emp">
-      <td>{{ e.id }}</td>
-      <td>{{ e.name }}</td>
-      <td>{{ e.salary }}</td>
-    </tr>
-  </table>
-</ng-template>
+<h1>Portfolio</h1>
+<ng-container>
+  <h2>Personal Information</h2>
+  <form>
+    <div>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" />
+    </div>
+    <div>
+      <label for="email">Email</label>
+      <input type="text" name="email" id="email" />
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" id="phone" />
+    </div>
+    <div>
+      <label for="address">Address</label>
+      <input type="text" name="address" id="address" />
+    </div>
+  </form>
+  <h2>Qualifications</h2>
+  <div>
+    <form>
+      <div>
+        <label for="school">School/College</label>
+        <input type="text" name="school" id="school" />
+      </div>
+      <div>
+        <label for="degree">Degree</label>
+        <input type="text" name="degree" id="degree" />
+      </div>
+      <div>
+        <label for="year">Year</label>
+        <input type="text" name="year" id="year" />
+      </div>
+    </form>
+    <div class="btn-container">
+      <button>Add Qualification</button>
+      <button type="submit">Submit</button>
+    </div>
+  </div>
+</ng-container>
 
-<ng-container
-  *ngTemplateOutlet="employeeTable; context: { $implicit: employees }"
-></ng-container>
+<ng-template>
+  <div class="preview-container">
+    <h2>Preview</h2>
+    <div>
+      <p></p>
+      <p>Email</p>
+      <p>Phone</p>
+      <p>Address</p>
+    </div>
+    <div>
+      <h3>Qualifications</h3>
+      <div>
+        <h5>School/College</h5>
+        <h5>Degree :</h5>
+      </div>
+    </div>
+    <button class="btn-edit">Edit</button>
+  </div>
+</ng-template>
